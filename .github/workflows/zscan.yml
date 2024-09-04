@@ -47,7 +47,7 @@ jobs:
       timeout-minutes: 60
       with:
         # REPLACE: Zimperium Client Environment Name
-        client_env: Leimar
+        client_env: Partner-Philippines - Netrust
         # REPLACE: Zimperium Client ID
         client_id: QS3HbntyQleZIje2_Aurqw
         # REPLACE: Zimperium Client Secret
