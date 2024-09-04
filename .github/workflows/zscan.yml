@@ -38,8 +38,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-   # - name: Execute gradle build
-    #  run: ./gradlew build    # Change this to build your mobile application
+    - name: Download APK from Google Drive
+      run: |
+        curl -L -o sample_zscan.apk 'https://drive.google.com/uc?export=download&id=1Ge9L1mwvd4ZTCD7bOIEShvsTCxXhZ9GQ'
 
     - name: Run Zimperium zScan
       uses: zimperium/zscanmarketplace@bfc6670f6648d796098c251ccefcfdb98983174d
@@ -52,7 +53,7 @@ jobs:
         # REPLACE: Zimperium Client Secret
         client_secret: ${{ secrets.ZSCAN_CLIENT_SECRET }}
         # REPLACE: The path to an .ipa or .apk
-        app_file: InsecureBankv2.apk
+        app_file: sample_zscan.apk
 
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v3
